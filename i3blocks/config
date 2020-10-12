@@ -1,0 +1,79 @@
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+
+[volume]
+#label=♪
+command=$SCRIPT_DIR/volume/volume
+label=VOL 
+interval=once
+signal=10
+#STEP=5%
+
+# Memory usage
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+command=$SCRIPT_DIR/memory/memory
+label=MEM 
+separator=true
+interval=30
+
+#[memory]
+#command=$SCRIPT_DIR/memory/memory
+#label=SWAP 
+#instance=swap
+#separator=true
+#interval=30
+
+# Disk usage
+[disk]
+command=$SCRIPT_DIR/disk/disk
+label=ROOT 
+DIR=/
+interval=30
+
+[battery]
+command=$SCRIPT_DIR/battery/battery
+label=⚡
+interval=30
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage/cpu_usage
+label=CPU
+interval=10
+min_width=CPU0.00%
+separator=false
+
+[temperature]
+command=$SCRIPT_DIR/temperature/temperature
+interval=10
+
+# Network
+[iface]
+command=$SCRIPT_DIR/iface/iface
+label=IP: 
+IFACE=wlp58s0
+color=#00FF00
+interval=10
+separator=false
+[iface]
+command=$SCRIPT_DIR/iface/iface
+label=WG: 
+IFACE=wg0
+color=#00FF00
+interval=10
+separator=true
+
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
