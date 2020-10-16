@@ -1,4 +1,5 @@
 export TERM=xterm-color
+export LANG=en_US.UTF-8
 
 ZSH=/usr/share/oh-my-zsh/
 
