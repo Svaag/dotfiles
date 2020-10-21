@@ -1,28 +1,46 @@
-    # Taerminal
-    colors:
-      primary:
-        background: '0x0c0c0c'
-        foreground: '0xf0f0f0'
-      cursor:
-        background: '0xf0f0f0'
-        foreground: '0x26282a'
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
 
-      normal:
-        black:   '0x26282a'
-        red:     '0xff8878'
-        green:   '0xb4fb73'
-        yellow:  '0xfffcb7'
-        blue:    '0x8bbce5'
-        magenta: '0xffb2fe'
-        cyan:    '0xa2e1f8'
-        white:   '0xf1f1f1'
+  bold:
+    family: Source Code Pro
+    style: Bold
 
-      bright:
-        black:   '0x6f6f6f'
-        red:     '0xfe978b'
-        green:   '0xd6fcba'
-        yellow:  '0xfffed5'
-        blue:    '0xc2e3ff'
-        magenta: '0xffc6ff'
-        cyan:    '0xc0e9f8'
-        white:   '0xffffff'
+  italic:
+    family: Source Code Pro
+    style: Italic
+
+  bold_italic:
+    family: Source Code Pro
+    style: Bold Italic
+
+  size: 10
+# Taerminal
+colors:
+  primary:
+    background: '0x0c0c0c'
+    foreground: '0xf0f0f0'
+  cursor:
+    background: '0xf0f0f0'
+    foreground: '0x26282a'
+
+  normal:
+    black:   '0x26282a'
+    red:     '0xff8878'
+    green:   '0xb4fb73'
+    yellow:  '0xfffcb7'
+    blue:    '0x8bbce5'
+    magenta: '0xffb2fe'
+    cyan:    '0xa2e1f8'
+    white:   '0xf1f1f1'
+
+  bright:
+    black:   '0x6f6f6f'
+    red:     '0xfe978b'
+    green:   '0xd6fcba'
+    yellow:  '0xfffed5'
+    blue:    '0xc2e3ff'
+    magenta: '0xffc6ff'
+    cyan:    '0xc0e9f8'
+    white:   '0xffffff'
