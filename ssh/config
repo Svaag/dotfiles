@@ -1,0 +1,8 @@
+Host github.com
+    IdentityFile ~/.ssh/id_github
+
+Host *.servify.se
+    IdentityFile ~/.ssh/id_yubikey
+    ControlPath ~/.ssh/cm-%r@%h:%p
+    ControlMaster auto
+    ControlPersist 10m
