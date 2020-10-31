@@ -172,7 +172,7 @@ bar {
 exec setxkbmap se &
 
 # Screen stuff
-exec picom -b --experimental-backends &
+exec picom --experimental-backends &
 exec sleep 2 && ~/.screenlayout/default.sh &
 exec sleep 4 && feh --bg-scale ~/wallpapers/dark-minimal.jpg
 exec sleep 4 && xrandr --dpi 166 &
