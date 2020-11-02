@@ -1,3 +1,12 @@
+# class                 border  bground text    indicator child_border
+client.focused          #222222 #333333 #FFFFFF #2F4F4F   #333333
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #FFFFFF
+
 # Font for window titles (and bar unless specified in bar {}
 font pango:Source Code Pro 8
 
@@ -161,6 +170,9 @@ bindsym Mod4+r mode "resize"
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# Printscreen to file and clipbord
+bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+
 # Status bar
 bar {
         status_command SCRIPT_DIR=~/.i3blocks i3blocks
@@ -180,5 +192,5 @@ exec sleep 4 && xrandr --dpi 166 &
 # Desktop notifications
 exec /usr/bin/dunst &
 
-# XDG autostart through dex
-exec dex -ae i3 &
+# XDG autostart through de
+exec dex -ae i3
