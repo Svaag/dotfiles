@@ -179,5 +179,6 @@ exec sleep 4 && xrandr --dpi 166 &
 
 # Desktop notifications
 exec /usr/bin/dunst &
-# Apparmor notifications
-exec aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log &
+
+# XDG autostart through dex
+exec dex -ae i3 &
