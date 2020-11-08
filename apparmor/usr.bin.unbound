@@ -1,7 +1,7 @@
 # vim:syntax=apparmor
 #include <tunables/global>
 
-/usr/sbin/unbound flags=(attach_disconnected) {
+/usr/bin/unbound flags=(attach_disconnected) {
   #include <abstractions/base>
   #include <abstractions/nameservice>
   #include <abstractions/openssl>
@@ -33,7 +33,7 @@
   audit deny /var/lib/unbound/**/unbound_control.{key,pem} rw,
   audit deny /var/lib/unbound/**/unbound_server.key w,
 
-  /usr/sbin/unbound mr,
+  /usr/bin/unbound mr,
 
   /{,var/}run/systemd/notify w,
   /{,var/}run/{unbound/,}unbound.pid rw,
