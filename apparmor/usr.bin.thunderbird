@@ -427,7 +427,5 @@ profile thunderbird /usr/lib/thunderbird/thunderbird{,-bin} {
     /usr/share/sounds/** r,
   }
 
-  # Site-specific additions and overrides. See local/README for details.
-  #include <local/usr.bin.thunderbird>
 }
 
