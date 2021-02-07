@@ -32,7 +32,7 @@ set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
-output * bg ~/wp/dark-minimal-scenery-4k-xj.jpg fill
+output * bg ~/wallpapers/todo-meme.jpg stretch
 output eDP-1 scale 1.4
 # swaymsg -t get_outputs
 
@@ -202,7 +202,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 #
 # Status Bar:
 bar {
-    position top
+    #position bottom
 
     swaybar_command waybar
 
