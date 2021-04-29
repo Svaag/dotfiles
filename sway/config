@@ -32,7 +32,7 @@ set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
-output * bg ~/wallpapers/todo-meme.jpg stretch
+output * bg ~/wallpapers/dark-minimal-scenery-4k-xj.jpg stretch
 output eDP-1 scale 1.4
 # swaymsg -t get_outputs
 
@@ -194,6 +194,7 @@ bindsym $mod+n exec swaylock -f -c 000000
 
 # Screenshot
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
+bindsym Shift+Print exec grim - | wl-copy
 
 # Function keys
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -217,6 +218,10 @@ include /etc/sway/config.d/*
 
 # Look into this
 #for_window [app_id="mako"] opacity 1
+set $opacity 0.90
+for_window [class="Leafpad"] floating enable, sticky enable
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
 
 # Notificaitons
 exec mako
