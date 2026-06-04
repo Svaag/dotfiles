@@ -1,14 +1,57 @@
-default-timeout=10000
+# ~/.config/mako/config
 
+# Geometry & positioning
+max-visible=5
+sort=-time
+anchor=top-right
+margin=10
+padding=12,16
+width=380
+height=120
+border-size=2
+border-radius=4
+
+# Typography
+font=monospace 11
+
+# Colors (dark terminal aesthetic)
+background-color=#1a1a2eee
+text-color=#c0caf5
+border-color=#7aa2f7
+progress-color=#3b4261
+
+# Icons
+max-icon-size=48
+icon-path=/usr/share/icons/hicolor
+
+# Behavior
+layer=overlay
 markup=1
 actions=1
+default-timeout=8000
+ignore-timeout=0
+group-by=app-name
+format=<b>%a</b>\n%s\n%b
 
-# Solarized, todo remake darker
-font=Source Sans Pro Semi-Bold 10
-background-color=#002B36
-text-color=#839496
-border-color=#073642
+# Bindings
+on-button-left=dismiss
+on-button-middle=none
+on-button-right=dismiss-all
+on-touch=dismiss
+
+# Urgency overrides
+[urgency=low]
+background-color=#1a1a2ecc
+border-color=#565f89
 default-timeout=5000
 
-[urgency=high]
-text-color=#CB4B16
+[urgency=critical]
+background-color=#1a1a2eee
+border-color=#f7768e
+text-color=#f7768e
+default-timeout=0
+ignore-timeout=1
+
+# Grouped notification format
+[grouped]
+format=<b>%a</b> (%g)\n%s\n%b

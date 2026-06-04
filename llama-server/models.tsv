@@ -1,0 +1,4 @@
+# label<TAB>model_args<TAB>server_args
+# Add more models below. model_args can be: -hf owner/repo:quant OR -m /path/to/model.gguf
+# If server_args is empty, the picker uses DEFAULT_SERVER_ARGS from ai-model-picker.sh.
+Gemma 4 12B BF16	-hf unsloth/gemma-4-12b-it-GGUF:BF16	
