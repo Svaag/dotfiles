@@ -1,0 +1,15 @@
+[Unit]
+Description=Waybar for Hyprland
+Documentation=https://github.com/Alexays/Waybar/wiki/
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/waybar
+ExecReload=/bin/kill -SIGUSR2 $MAINPID
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

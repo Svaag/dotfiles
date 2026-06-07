@@ -14,6 +14,7 @@
     "clock"
   ],
   "modules-right": [
+    "custom/spotify",
     "tray",
     "custom/ai",
     "custom/pomodoro",
@@ -169,5 +170,16 @@
     "return-type": "json",
     "interval": 5,
     "tooltip": true
+  },
+  "custom/spotify": {
+    "exec": "$HOME/.config/waybar/scripts/spotify.sh",
+    "return-type": "json",
+    "interval": 2,
+    "tooltip": true,
+    "exec-if": "playerctl -p spotify metadata >/dev/null 2>&1",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-click-right": "playerctl -p spotify next",
+    "on-click-middle": "playerctl -p spotify previous",
+    "max-length": 70
   }
 }

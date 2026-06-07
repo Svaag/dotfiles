@@ -1,4 +1,6 @@
 # label<TAB>model_args<TAB>server_args
 # Add more models below. model_args can be: -hf owner/repo:quant OR -m /path/to/model.gguf
 # If server_args is empty, the picker uses DEFAULT_SERVER_ARGS from ai-model-picker.sh.
-Gemma 4 12B BF16	-hf unsloth/gemma-4-12b-it-GGUF:BF16	
+# Gemma is pinned to the local non-MTP GGUF because -hf unsloth/gemma-4-12b-it-GGUF:BF16 currently resolves to MTP/gemma-4-12B-it-MTP-BF16.gguf.
+Gemma 4 12B BF16	-m /home/svag/.local/share/llama-server/models/gemma-4-12b-it-BF16.gguf	
+Gemma 4 12B it UD Q8_K_XL	-hf unsloth/gemma-4-12b-it-GGUF --hf-file gemma-4-12b-it-UD-Q8_K_XL.gguf	--temp 1.0 --top-p 0.95 --top-k 64 -c 0 -fa on -ngl 999 -t 16 -b 4096 -ub 1024 --no-mmap -np 1 --no-mmproj
