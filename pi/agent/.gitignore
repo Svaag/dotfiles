@@ -1,0 +1,9 @@
+# Secrets and machine/session-local Pi state
+auth.json
+auth.json.bak.*
+trust.json
+sessions/
+fastcontext-trajectories/
+bin/
+lib/
+*.bak.*
